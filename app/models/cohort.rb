@@ -1,3 +1,3 @@
 # Write the Cohort class below
-class Cohort
+class Cohort 
 end
