@@ -1,2 +1,2 @@
-class Cohort < ActiveRecord::Base
+class Course < ActiveRecord::Base
 end
