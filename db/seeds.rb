@@ -44,6 +44,7 @@ user5 =
   )
 
 puts "seeding cohort ..."
+
 cohort1 = Cohort.create(name: "cohort one")
 cohort2 = Cohort.create(name: "cohort two")
 
