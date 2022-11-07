@@ -34,4 +34,14 @@ lecturer1 =
     cohort_id: cohort1.id
   )
 
+puts "seeding students ..."
+student1 =
+  Student.create(
+    user_id: user1.id,
+    #course_id: course1.id,
+    lecture_id: lecturer1.id,
+    #cohort_id: cohort1.id,
+    grade: 78
+  )
+
 puts "✅ Done seeding!"
