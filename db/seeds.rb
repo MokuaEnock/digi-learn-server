@@ -12,7 +12,11 @@ user1 =
   User.create(
     name: Faker::Name.name,
     email: Faker::Internet.email,
-    password: Faker::Internet.password(8),
+    password: Faker::Internet.password
   )
 
+puts "seeding cohort ..."
+cohort1 = Cohort.create(name: "cohort one")
+
+puts 
 puts "✅ Done seeding!"
