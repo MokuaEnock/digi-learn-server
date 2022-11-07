@@ -13,7 +13,6 @@ user1 =
     name: Faker::Name.name,
     email: Faker::Internet.email,
     password: Faker::Internet.password(8),
-    type: "Student"
   )
 
 puts "✅ Done seeding!"
