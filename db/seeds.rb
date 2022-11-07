@@ -18,12 +18,20 @@ user1 =
 puts "seeding cohort ..."
 cohort1 = Cohort.create(name: "cohort one")
 
-puts "seeding courses"
+puts "seeding courses ...."
 course1 =
   Course.create(
     name: Faker::Lorem.word,
     duration: Faker::Number.between(from: 1, to: 12),
     description: Faker::Lorem.sentence
+  )
+
+puts "seeding lecturers ..."
+lecturer1 =
+  Lecturer.create(
+    user_id: user1.id,
+    course_id: course1.id,
+    cohort_id: cohort1.id
   )
 
 puts "✅ Done seeding!"
