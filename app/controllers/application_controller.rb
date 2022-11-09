@@ -117,4 +117,11 @@ delete "/student/:id" do
    {message: "Student '#{student.name}'has been deleted."}.to_json
   end
 
+  # delete all students in table
+  delete  "/students" do
+   students = Student.all
+   students.destroy
+   {message: "All students have been deleted"}.to_json
+  end
+
 end
