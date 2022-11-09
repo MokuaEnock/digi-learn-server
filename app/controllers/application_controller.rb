@@ -71,6 +71,15 @@ post "/student/:id" do
 student.to_json
 end
 
+# create all students grade
+post "/students" do
+students = Student.all
+students =Student.create (
+  grade: params[:grade]
+)
+students.to_json
+end
+
 # create a User
 post "/user" do
   user = User.create(
@@ -104,9 +113,8 @@ end
 # delete student details
 delete "/student/:id" do
   student = Student.find(params[:id])
-  student.delete(
-
-  )
-end
+  student.destroy
+   {message: "Student '#{student.name}'has been deleted."}.to_json
+  end
 
 end
