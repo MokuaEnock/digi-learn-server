@@ -63,19 +63,22 @@ get "/course/:id" do
   Course.find(params[:id]).to_json
 end
 
-# create a student grade
-post "/student" do 
-  student = Student.create(
+# create a  specifics student grade
+post "/student/:id" do 
+ student = Student.create(
  grade: params[:grade]
-)
+  )
 student.to_json
 end
 
 # create a User
 post "/user" do
   user = User.create(
-
-  )
+    name: params[:name],
+    email: params[:email],
+    password: params[:password]
+)
+user.to_json
 end
 
 
