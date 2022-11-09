@@ -68,15 +68,17 @@ puts "seeding lecturers ..."
 lecturer1 =
   Lecturer.create(
     user_id: user1.id,
-    course_id: course1.id
+    course_id: course1.id,
+    image: Faker::Avatar.image
     #cohort_id: cohort1.id
   )
 
 lecturer2 =
   Lecturer.create(
     user_id: user2.id,
-    course_id: course2.id
+    course_id: course2.id,
     #cohort_id: cohort1.id
+    image: Faker::Avatar.image
   )
 
 puts "seeding students ..."
@@ -87,24 +89,27 @@ student1 =
     #course_id: course1.id,
     lecturer_id: lecturer1.id,
     cohort_id: cohort1.id,
-    grade: 78
+    grade: 78,
+    image: Faker::Avatar.image
   )
 
-student1 =
+student2 =
   Student.create(
     user_id: user1.id,
     #course_id: course1.id,
     lecturer_id: lecturer1.id,
     cohort_id: cohort2.id,
-    grade: 78
+    grade: 78,
+    image: Faker::Avatar.image
   )
 
-student1 =
+student3 =
   Student.create(
     user_id: user1.id,
     #course_id: course1.id,
     lecturer_id: lecturer2.id,
     cohort_id: cohort2.id,
-    grade: 78
+    grade: 78,
+    image: Faker::Avatar.image
   )
 puts "✅ Done seeding!"
