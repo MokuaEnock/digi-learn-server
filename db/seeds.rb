@@ -85,7 +85,7 @@ student1 =
   Student.create(
     user_id: user1.id,
     #course_id: course1.id,
-    lecture_id: lecturer1.id,
+    lecturer_id: lecturer1.id,
     cohort_id: cohort1.id,
     grade: 78
   )
@@ -94,7 +94,7 @@ student1 =
   Student.create(
     user_id: user1.id,
     #course_id: course1.id,
-    lecture_id: lecturer1.id,
+    lecturer_id: lecturer1.id,
     cohort_id: cohort2.id,
     grade: 78
   )
@@ -103,7 +103,7 @@ student1 =
   Student.create(
     user_id: user1.id,
     #course_id: course1.id,
-    lecture_id: lecturer2.id,
+    lecturer_id: lecturer2.id,
     cohort_id: cohort2.id,
     grade: 78
   )

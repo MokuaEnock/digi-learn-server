@@ -63,40 +63,47 @@ get "/course/:id" do
   Course.find(params[:id]).to_json
 end
 
-# create a student
-post "/student" do
+# create a student grade
+post "/student" do 
   student = Student.create(
-    user_id: params[:user_id],
-    course_id: params[:course_id],
-    lecture_id: params[:lecture_id],
-    cohort_id: params[:cohort_id],
-    grade: params[:grade]
+ grade: params[:grade]
 )
 student.to_json
 end
 
-# create a lecturer
-post "/lecturer" do
-  lecturer = Lecturer.create(
-    user_id: params[:user_id],
-    course_id: parans[:course_id],
-    cohort_id: params[:cohort_id]
+# create a User
+post "/user" do
+  user = User.create(
+
   )
-  lecturer.to_json
 end
+
+
+# create a lecturer
+# post "/lecturer" do
+#   lecturer = Lecturer.create(
+#     user_id: params[:user_id],
+#     course_id: parans[:course_id],
+#     cohort_id: params[:cohort_id]
+#   )
+#   lecturer.to_json
+# end
 
 # update a student
 patch "/student/:id" do
   student = Student.find(params[:id])
   student.update(
-      user_id: params[:user_id],
-      course_id: params[:course_id],
-      lecture_id: params[:lecture_id]
-      cohort_id: params[:cohort_id],
       grade: params[:grade] 
        )
        {message: "Student details updated!"}.to_json
 end
 
+# delete student details
+delete "/student/:id" do
+  student = Student.find(params[:id])
+  student.delete(
+
+  )
+end
 
 end
