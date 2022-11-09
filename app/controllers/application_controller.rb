@@ -29,7 +29,7 @@ class ApplicationController < Sinatra::Base
   get "/student/:id" do
    Student.find(params[:id]).to_json
   end
-  
+
   # get all lecturers
   get "/lecturers" do
     lecturers = Lecturer.all
@@ -64,21 +64,21 @@ get "/course/:id" do
 end
 
 # create a  specifics student grade
-post "/student/:id" do 
- student = Student.create(
- grade: params[:grade]
-  )
-student.to_json
-end
+# post "/student/:id" do
+#  student = Student.create(
+#  grade: params[:grade]
+#   )
+# student.to_json
+# end
 
 # create all students grade
-post "/students" do
-students = Student.all
-students =Student.create (
-  grade: params[:grade]
-)
-students.to_json
-end
+# post "/students" do
+# students = Student.all
+# students =Student.create (
+#   grade: params[:grade]
+# )
+# students.to_json
+# end
 
 # create a User
 post "/user" do
@@ -105,7 +105,7 @@ end
 patch "/student/:id" do
   student = Student.find(params[:id])
   student.update(
-      grade: params[:grade] 
+      grade: params[:grade]
        )
        {message: "Student details updated!"}.to_json
 end
