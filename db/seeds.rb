@@ -69,15 +69,15 @@ lecturer1 =
   Lecturer.create(
     user_id: user1.id,
     course_id: course1.id,
-    image: Faker::Avatar.image
-    #cohort_id: cohort1.id
+    image: Faker::Avatar.image,
+    cohort_id: cohort2.id
   )
 
 lecturer2 =
   Lecturer.create(
     user_id: user2.id,
     course_id: course2.id,
-    #cohort_id: cohort1.id
+    cohort_id: cohort1.id,
     image: Faker::Avatar.image
   )
 
